@@ -66,7 +66,7 @@ module Fluent
           'host' => k8s_metadata['host']
         }
 
-        transport.send(new_timber, header)
+        transport.send_compressed(new_timber, header)
       end
     end
 
