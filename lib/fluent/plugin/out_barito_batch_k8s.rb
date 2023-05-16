@@ -38,6 +38,8 @@ module Fluent
         # Kubernetes annotations
         k8s_metadata = record['kubernetes']
 
+        puts "======", k8s_metadata
+
         record = clean_attribute(record)
         trail = Fluent::Plugin::ClientTrail.new(true)
         timber = Fluent::Plugin::TimberFactory::create_timber(tag, time, record, trail)
